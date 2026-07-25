@@ -627,8 +627,20 @@ textarea { resize: vertical; min-height: 120px; }
   width: 36px; height: 36px; border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.25);
   display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
 }
-.social-row a:hover { border-color: var(--color-lime-green); }
+.social-row a:hover { border-color: var(--color-lime-green); color: var(--color-lime-green); }
+
+.social-row-light { display: flex; gap: 0.65rem; }
+.social-row-light a {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1.5px solid var(--color-royal-blue);
+  color: var(--color-royal-blue);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  transition: all 0.2s var(--ease);
+}
+.social-row-light a:hover { background: var(--color-royal-blue); color: #fff; }
 
 /* Page header (inner pages) */
 .page-header {
