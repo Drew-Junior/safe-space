@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Safe Space - Notts CIC</title>
+<meta name="description" content="Photos from The Cook School, Heritage Hub, and our Nottingham facility.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- Netlify Identity: must be present on every page, not just /admin/, so that
+     invite/recovery links (which land on the site root) can catch the token in
+     the URL and prompt the user to set their password. Harmless no-op on other hosts. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body data-page="gallery.html">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header" aria-label="Primary navigation"></header>
+
+<main id="main">
+  <section class="page-header">
+    <div class="container">
+      <p class="eyebrow">Gallery</p>
+      <h1>Inside Safe Space - Notts CIC</h1>
+      <p class="lede">A look at The Cook School, the Heritage Hub, and our Nottingham facility. New images are added by our team through the CMS dashboard.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="filter-tabs" id="filter-tabs" role="tablist" aria-label="Filter gallery by category">
+        <button class="filter-tab active" data-filter="All">All</button>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <p class="state-msg">Loading gallery&hellip;</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer class="site-footer" id="site-footer" aria-label="Site footer"></footer>
+
+<script src="js/partials.js"></script>
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

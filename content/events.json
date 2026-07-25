@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "title": "Cook School: Front-of-House & Service Skills",
+      "category": "Cook School",
+      "date": "2026-08-12",
+      "summary": "Certified hospitality service training for NEET young people, run with local restaurant partners.",
+      "location": "Safe Space Facility, Croydon Road"
+    },
+    {
+      "title": "Heritage Hub Corporate Showcase",
+      "category": "Heritage Hub",
+      "date": "2026-08-22",
+      "summary": "Youth-led cultural display available for corporate and community hire, covering textiles, hair braiding, and performance.",
+      "location": "On-site or client venue"
+    },
+    {
+      "title": "SOS Framework: Peer-Led Workshop",
+      "category": "SOS Framework",
+      "date": "2026-09-04",
+      "summary": "Peer-facilitated emotional regulation session built on the Support, Observe, Succeed model.",
+      "location": "Safe Space Facility, Croydon Road"
+    },
+    {
+      "title": "Early Years Open Morning",
+      "category": "Early Years",
+      "date": "2026-09-18",
+      "summary": "Parents and carers preview foundational early years provision ahead of the nursery scale-up.",
+      "location": "Safe Space Facility, Croydon Road"
+    }
+  ]
+}

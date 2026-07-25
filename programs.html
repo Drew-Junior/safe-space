@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programs &amp; Events | Safe Space - Notts CIC</title>
+<meta name="description" content="Featured activities, upcoming workshops, and corporate booking inquiries for Safe Space - Notts CIC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- Netlify Identity: must be present on every page, not just /admin/, so that
+     invite/recovery links (which land on the site root) can catch the token in
+     the URL and prompt the user to set their password. Harmless no-op on other hosts. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body data-page="programs.html">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header" aria-label="Primary navigation"></header>
+
+<main id="main">
+  <section class="page-header">
+    <div class="container">
+      <p class="eyebrow">Programs &amp; Events</p>
+      <h1>Ongoing engagements and upcoming sessions</h1>
+      <p class="lede">From daily creative activities to corporate cultural bookings, here's what's happening across Safe Space - Notts CIC.</p>
+    </div>
+  </section>
+
+  <!-- Featured Activities -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Featured Activities</p>
+        <h2>What young people do here, every week</h2>
+      </div>
+      <div class="activity-grid">
+        <div class="activity-card reveal"><span class="activity-icon">🎨</span><h4>Painting &amp; Colouring</h4><span>Creative Arts</span></div>
+        <div class="activity-card reveal"><span class="activity-icon">💄</span><h4>Face Painting &amp; Makeup</h4><span>Creative Arts</span></div>
+        <div class="activity-card reveal"><span class="activity-icon">📖</span><h4>Storytelling</h4><span>Creative Arts</span></div>
+        <div class="activity-card reveal"><span class="activity-icon">💇🏾‍♀️</span><h4>Hair Braiding</h4><span>Heritage Hub</span></div>
+        <div class="activity-card reveal"><span class="activity-icon">🔤</span><h4>Word Searches</h4><span>Cognitive Exercises</span></div>
+        <div class="activity-card reveal"><span class="activity-icon">🎶</span><h4>Dancing &amp; Music</h4><span>Expression &amp; Movement</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CMS Event Stream -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Upcoming</p>
+        <h2>Workshops &amp; corporate bookings</h2>
+        <p>Managed live through our CMS — new sessions appear here as soon as they're added.</p>
+      </div>
+      <div class="event-grid" id="event-grid">
+        <p class="state-msg">Loading upcoming sessions&hellip;</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry Form -->
+  <section id="inquiry">
+    <div class="container" style="max-width: 760px;">
+      <div class="section-head">
+        <p class="eyebrow">Booking &amp; Inquiries</p>
+        <h2>Hire a cultural display, book catering, or ask about a workshop</h2>
+        <p>Tell us what you're planning and we'll come back to you directly.</p>
+      </div>
+      <form class="card" id="inquiry-form">
+        <div class="form-grid">
+          <div>
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="organisation">Organisation (if applicable)</label>
+            <input type="text" id="organisation" name="organisation">
+          </div>
+          <div>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="inquiry_type">Inquiry type</label>
+            <select id="inquiry_type" name="inquiry_type">
+              <option>Corporate hire — Cultural Display</option>
+              <option>Catering / Cook School booking</option>
+              <option>Workshop inquiry</option>
+              <option>General partnership inquiry</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Send Inquiry</button>
+        <p class="form-note">Submitting opens your email client addressed to our team, so you can review before sending.</p>
+        <p class="form-success" id="inquiry-success">Thanks — your email draft is ready to send. We'll be in touch shortly.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer" aria-label="Site footer"></footer>
+
+<script src="js/partials.js"></script>
+<script src="js/main.js"></script>
+<script src="js/programs.js"></script>
+</body>
+</html>

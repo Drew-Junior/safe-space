@@ -1,0 +1,109 @@
+# Decap CMS configuration for Safe Space - Notts CIC
+#
+# AUTH: This file intentionally contains no usernames or passwords.
+# Editor accounts and logins are managed entirely by the backend below
+# (Netlify Identity + Git Gateway, or a GitHub OAuth app — see README.md
+# in this folder for setup steps for either option). Each staff member
+# gets their own login; there is no shared site-wide password anywhere
+# in this repository.
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+publish_mode: editorial_workflow
+
+collections:
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "content/settings.json"
+        label: "Global Settings (Nav, Contact, Footer)"
+        name: "settings"
+        fields:
+          - { label: "Organisation Name", name: "org_name", widget: "string" }
+          - { label: "Short Name (used in header)", name: "org_short", widget: "string" }
+          - { label: "Company Registration Number", name: "reg_number", widget: "string" }
+          - { label: "Legal Entity Type", name: "entity_type", widget: "string" }
+          - { label: "Facility Address", name: "address", widget: "string" }
+          - { label: "Contact Email", name: "email", widget: "string" }
+          - { label: "Logo Image", name: "logo_image", widget: "image", required: false, hint: "Square image works best (PNG or SVG with a transparent background). Leave empty to keep the default drawn mark." }
+          - label: "Social Links"
+            name: "socials"
+            widget: "list"
+            hint: "Add one entry per platform. The footer shows each platform's first two letters as a circular link."
+            fields:
+              - { label: "Platform", name: "platform", widget: "string" }
+              - { label: "Profile URL", name: "url", widget: "string" }
+          - label: "Navigation Links"
+            name: "nav"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link (href)", name: "href", widget: "string" }
+          - { label: "Header CTA Button Label", name: "cta_label", widget: "string" }
+          - { label: "Header CTA Button Link", name: "cta_href", widget: "string" }
+
+  - name: "events"
+    label: "Programs & Events"
+    files:
+      - file: "content/events.json"
+        label: "Upcoming Events List"
+        name: "events"
+        fields:
+          - label: "Events"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Cook School", "Heritage Hub", "SOS Framework", "Early Years"]
+              - { label: "Date", name: "date", widget: "date" }
+              - { label: "Image (optional)", name: "image", widget: "image", required: false }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Location", name: "location", widget: "string" }
+
+  - name: "board"
+    label: "Board of Directors"
+    files:
+      - file: "content/board.json"
+        label: "Directors & Photos"
+        name: "board"
+        fields:
+          - label: "Directors"
+            name: "directors"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Key (do not change)", name: "key", widget: "string", hint: "Must stay as 'nancy' or 'christina' — it links this entry to the right portfolio page." }
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Credential (optional)", name: "credential", widget: "string", required: false }
+              - { label: "Role / Title", name: "role", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Portfolio Page Link", name: "portfolio_href", widget: "string" }
+
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - file: "content/gallery.json"
+        label: "Gallery Images"
+        name: "gallery"
+        fields:
+          - label: "Images"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.category}} — {{fields.title}}"
+            fields:
+              - { label: "Title / Caption", name: "title", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["The Cook School", "Heritage Hub", "Facility"]
+              - { label: "Image", name: "image", widget: "image" }

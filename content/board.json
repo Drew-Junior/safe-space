@@ -1,0 +1,20 @@
+{
+  "directors": [
+    {
+      "key": "nancy",
+      "name": "Reverend Minister Nancy Abakah Philips",
+      "credential": "Cert. Counsel",
+      "role": "Founder & Strategic Oversight",
+      "photo": "assets/img/gallery-facility-1.svg",
+      "portfolio_href": "director-nancy.html"
+    },
+    {
+      "key": "christina",
+      "name": "Christina Ama Aframoah, BA (Hons)",
+      "credential": "",
+      "role": "Co-Director & Executive Lead",
+      "photo": "assets/img/gallery-heritage-1.svg",
+      "portfolio_href": "director-christina.html"
+    }
+  ]
+}

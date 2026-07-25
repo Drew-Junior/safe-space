@@ -1,0 +1,22 @@
+{
+  "org_name": "Safe Space - Notts CIC",
+  "org_short": "Safe Space",
+  "reg_number": "17232039",
+  "entity_type": "Community Interest Company (Asset-Locked)",
+  "address": "63-65 Croydon Road, Nottingham, NG7 3DS",
+  "email": "safespacenottscic@gmail.com",
+  "logo_image": "",
+  "socials": [
+    { "platform": "LinkedIn", "url": "https://www.linkedin.com/" }
+  ],
+  "nav": [
+    { "label": "Home", "href": "index.html" },
+    { "label": "About", "href": "index.html#about" },
+    { "label": "Services", "href": "services.html" },
+    { "label": "Programs", "href": "programs.html" },
+    { "label": "Gallery", "href": "gallery.html" },
+    { "label": "Board", "href": "board.html" }
+  ],
+  "cta_label": "Partner With Us",
+  "cta_href": "programs.html#inquiry"
+}
