@@ -1,11 +1,11 @@
 {
   "items": [
-    { "title": "Culinary training session", "category": "The Cook School", "image": "assets/img/gallery-cookschool-1.svg" },
-    { "title": "Plating practice", "category": "The Cook School", "image": "assets/img/gallery-cookschool-2.svg" },
-    { "title": "Hair braiding workshop", "category": "Heritage Hub", "image": "assets/img/gallery-heritage-1.svg" },
-    { "title": "Textiles & design bench", "category": "Heritage Hub", "image": "assets/img/gallery-heritage-2.svg" },
+    { "title": "Culinary training session", "category": "The Cook School", "image": "assets/img/cook.jpg" },
+    { "title": "Plating practice", "category": "The Cook School", "image": "assets/img/plate.jpg" },
+    { "title": "Hair braiding workshop", "category": "Heritage Hub", "image": "assets/img/braid.jpg" },
+    { "title": "Textiles & design bench", "category": "Heritage Hub", "image": "assets/img/design.jpg" },
     { "title": "Facility reception", "category": "Facility", "image": "assets/img/gallery-facility-1.svg" },
-    { "title": "Group workshop room", "category": "Facility", "image": "assets/img/gallery-facility-2.svg" },
+    { "title": "Group workshop room", "category": "Facility", "image": "assets/img/group.jpg" },
     { "title": "Plating practice", "category": "Heritage Hub", "image": "assets/img/braid.jpg" }
   ]
 }
