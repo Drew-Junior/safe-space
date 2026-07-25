@@ -41,3 +41,7 @@
   "cta_href": "programs.html#inquiry",
   "email": "safespacenottscic@gmail.com"
 }
+"socials": [
+  { "platform": "Instagram", "url": "https://instagram.com/yourprofile" },
+  { "platform": "Facebook", "url": "https://facebook.com/yourpage" }
+]
