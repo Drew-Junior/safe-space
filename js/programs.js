@@ -54,7 +54,7 @@
             <span class="event-tag">${ev.category}</span>
             <h4>${ev.title}</h4>
             <p>${ev.summary}</p>
-            <p class="form-note">📍 ${ev.location}</p>
+            <p class="form-note"> ${ev.location}</p>
           </div>
         </article>
       `;
