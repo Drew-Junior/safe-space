@@ -25,11 +25,22 @@
       grid.innerHTML = '<p class="state-msg">No sessions are scheduled right now — new dates are added regularly.</p>';
       return;
     }
-    const sorted = [...events].sort((a, b) => new Date(a.date) - new Date(b.date));
+    const sorted = [...events].sort((a, b) => {
+      const da = new Date(a.date);
+      const db = new Date(b.date);
+      const aValid = !isNaN(da);
+      const bValid = !isNaN(db);
+      if (aValid && bValid) return da - db;
+      if (aValid) return -1;
+      if (bValid) return 1;
+      return 0;
+    });
     grid.innerHTML = sorted.map((ev) => {
       const d = new Date(ev.date);
-      const day = d.getDate();
-      const month = MONTHS[d.getMonth()];
+      const hasDate = !isNaN(d);
+      const dateBadge = hasDate
+        ? `<span class="day">${d.getDate()}</span><span>${MONTHS[d.getMonth()]} ${d.getFullYear()}</span>`
+        : `<span class="day">&mdash;</span><span>${ev.date || 'Coming Soon'}</span>`;
       const image = ev.image
         ? `<img class="event-image" src="${ev.image}" alt="${ev.title}" loading="lazy">`
         : '';
@@ -37,8 +48,7 @@
         <article class="event-card reveal">
           ${image}
           <div class="event-date">
-            <span class="day">${day}</span>
-            <span>${month} ${d.getFullYear()}</span>
+            ${dateBadge}
           </div>
           <div class="event-body">
             <span class="event-tag">${ev.category}</span>
@@ -50,7 +60,6 @@
       `;
     }).join('');
 
-    // Re-observe newly injected .reveal elements
     document.querySelectorAll('#event-grid .reveal').forEach((el) => el.classList.add('is-visible'));
   }
 
