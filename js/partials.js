@@ -15,8 +15,6 @@
       return await res.json();
     } catch (err) {
       console.warn('Falling back to default settings:', err);
-      // Minimal fallback so the site still renders if the CMS file is
-      // temporarily unavailable (e.g. first deploy before content is added).
       return {
         org_name: 'Safe Space - Notts CIC',
         org_short: 'Safe Space',
@@ -88,10 +86,9 @@
     const footerLogo = settings.logo_image
       ? `<img src="${settings.logo_image}" alt="${settings.org_name} logo" class="brand-logo-img">`
       : `<span class="brand-mark" aria-hidden="true"></span>`;
-    const socialLinks = (settings.socials || []).map((s) => {
-      const initials = s.platform.slice(0, 2).toUpperCase();
-      return `<a href="${s.url}" aria-label="${settings.org_short} on ${s.platform}" target="_blank" rel="noopener">${initials}</a>`;
-    }).join('');
+    const socialLinks = (settings.socials || []).map((s) =>
+      window.SafeSpaceSocialIcons.renderLink(s.platform, s.url, settings.org_short)
+    ).join('');
 
     mount.innerHTML = `
       <div class="container">
