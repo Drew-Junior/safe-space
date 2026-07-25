@@ -7,7 +7,13 @@
       "role": "Founder & Strategic Oversight",
       "photo": "/assets/img/nancy.jpeg",
       "portfolio_href": "director-nancy.html",
-      "socials": []
+      "socials": [
+  { "platform": "LinkedIn", "url": "https://linkedin.com/in/PROFILE-HANDLE" },
+  { "platform": "X", "url": "https://x.com/PROFILE-HANDLE" },
+  { "platform": "Facebook", "url": "https://facebook.com/PROFILE-HANDLE" },
+  { "platform": "TikTok", "url": "https://tiktok.com/@PROFILE-HANDLE" },
+  { "platform": "Instagram", "url": "https://instagram.com/PROFILE-HANDLE" }
+]
     },
     {
       "key": "christina",
@@ -16,7 +22,13 @@
       "role": "Co-Director & Executive Lead",
       "photo": "/assets/img/ama.jpeg",
       "portfolio_href": "director-christina.html",
-      "socials": []
+     "socials": [
+  { "platform": "LinkedIn", "url": "https://linkedin.com/in/PROFILE-HANDLE" },
+  { "platform": "X", "url": "https://x.com/PROFILE-HANDLE" },
+  { "platform": "Facebook", "url": "https://facebook.com/PROFILE-HANDLE" },
+  { "platform": "TikTok", "url": "https://tiktok.com/@PROFILE-HANDLE" },
+  { "platform": "Instagram", "url": "https://instagram.com/PROFILE-HANDLE" }
+]
     }
   ]
 }
