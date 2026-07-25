@@ -8,8 +8,12 @@
 # in this repository.
 
 backend:
-  name: git-gateway
+  name: github
+  repo: Drew-Junior/safe-space
   branch: main
+  base_url: https://decap-cms-oauth-wheat-two.vercel.app
+
+  #Point CMS at OAuth gateway
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
