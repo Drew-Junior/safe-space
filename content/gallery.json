@@ -5,6 +5,7 @@
     { "title": "Hair braiding workshop", "category": "Heritage Hub", "image": "assets/img/gallery-heritage-1.svg" },
     { "title": "Textiles & design bench", "category": "Heritage Hub", "image": "assets/img/gallery-heritage-2.svg" },
     { "title": "Facility reception", "category": "Facility", "image": "assets/img/gallery-facility-1.svg" },
-    { "title": "Group workshop room", "category": "Facility", "image": "assets/img/gallery-facility-2.svg" }
+    { "title": "Group workshop room", "category": "Facility", "image": "assets/img/gallery-facility-2.svg" },
+    { "title": "Plating practice", "category": "Heritage Hub", "image": "assets/img/braid.jpg" }
   ]
 }
