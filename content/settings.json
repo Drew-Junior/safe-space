@@ -5,7 +5,7 @@
   "entity_type": "Community Interest Company (Asset-Locked)",
   "address": "63-65 Croydon Road, Nottingham, NG7 3DS",
   "email": "safespacenottscic@gmail.com",
-  "logo_image": "",
+  "logo_image": "assets/img/logo.jpeg",
   "socials": [
     { "platform": "LinkedIn", "url": "https://www.linkedin.com/" }
   ],
