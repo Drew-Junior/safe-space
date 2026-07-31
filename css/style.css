@@ -440,6 +440,10 @@ section { padding-block: clamp(3.5rem, 7vw, var(--space-xl)); }
 }
 .activity-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
 .activity-icon { font-size: 1.8rem; margin-bottom: 0.6rem; display: block; }
+.activity-image {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover;
+  border-radius: var(--radius-sm); margin-bottom: 0.6rem;
+}
 .activity-card h4 { font-size: var(--step-0); margin-bottom: 0.25rem; }
 .activity-card span { font-size: var(--step--1); color: var(--slate); }
 
