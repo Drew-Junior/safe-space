@@ -31,7 +31,7 @@
       const aValid = !isNaN(da);
       const bValid = !isNaN(db);
       if (aValid && bValid) return da - db;
-      if (aValid) return -1;
+      if (aValid) return -1;   // real dates sort before "Coming Soon"-style entries
       if (bValid) return 1;
       return 0;
     });
@@ -54,12 +54,13 @@
             <span class="event-tag">${ev.category}</span>
             <h4>${ev.title}</h4>
             <p>${ev.summary}</p>
-            <p class="form-note"> ${ev.location}</p>
+            <p class="form-note">📍 ${ev.location}</p>
           </div>
         </article>
       `;
     }).join('');
 
+    // Re-observe newly injected .reveal elements
     document.querySelectorAll('#event-grid .reveal').forEach((el) => el.classList.add('is-visible'));
   }
 
