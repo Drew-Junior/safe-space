@@ -1,3 +1,13 @@
+/**
+ * social-icons.js — shared icon lookup + link renderer for social links.
+ * Used by both the site-wide footer (js/partials.js) and director
+ * portfolio pages (js/board.js), so the same platform name always
+ * renders the same icon in both places.
+ *
+ * Uses Font Awesome's brand icon set (loaded via CDN in each page's
+ * <head>) — Font Awesome's brand icons exist specifically to be used
+ * this way, to link out to an organisation's own official profiles.
+ */
 window.SafeSpaceSocialIcons = (function () {
   const ICONS = {
     facebook: 'fa-brands fa-facebook-f',
