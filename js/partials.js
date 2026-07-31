@@ -15,6 +15,8 @@
       return await res.json();
     } catch (err) {
       console.warn('Falling back to default settings:', err);
+      // Minimal fallback so the site still renders if the CMS file is
+      // temporarily unavailable (e.g. first deploy before content is added).
       return {
         org_name: 'Safe Space - Notts CIC',
         org_short: 'Safe Space',
@@ -23,6 +25,8 @@
         address: '63-65 Croydon Road, Nottingham, NG7 3DS',
         email: 'safespacenottscic@gmail.com',
         logo_image: '',
+        hero_image: '',
+        about_image: '',
         socials: [{ platform: 'LinkedIn', url: '#' }],
         nav: [
           { label: 'Home', href: 'index.html' },
