@@ -217,6 +217,10 @@ p { margin: 0 0 var(--space-sm); color: var(--slate); }
   position: relative;
   padding-block: 0.3rem;
 }
+.nav-links a.btn { color: #fff; }
+.nav-links a.btn:hover { color: #fff; }
+.nav-links a.btn::after { display: none; }
+
 .nav-links a::after {
   content: "";
   position: absolute;
