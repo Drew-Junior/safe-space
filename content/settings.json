@@ -6,6 +6,8 @@
   "address": "63-65 Croydon Road, Nottingham, NG7 3DS",
   "email": "safespacenottscic@gmail.com",
   "logo_image": "assets/img/logo.jpeg",
+  "hero_image": "",
+  "about_image": "",
   "socials": [
     { "platform": "LinkedIn", "url": "https://linkedin.com/company/YOUR-HANDLE" },
     { "platform": "X", "url": "https://x.com/YOUR-HANDLE" },
@@ -13,13 +15,31 @@
     { "platform": "TikTok", "url": "https://tiktok.com/@YOUR-HANDLE" },
     { "platform": "Instagram", "url": "https://instagram.com/YOUR-HANDLE" }
   ],
-  "nav": [
-    { "label": "Home", "href": "index.html" },
-    { "label": "About", "href": "index.html#about" },
-    { "label": "Services", "href": "services.html" },
-    { "label": "Programs", "href": "programs.html" },
-    { "label": "Gallery", "href": "gallery.html" },
-    { "label": "Board", "href": "board.html" }
+ "nav": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "About",
+      "href": "index.html#about"
+    },
+    {
+      "label": "Services",
+      "href": "services.html"
+    },
+    {
+      "label": "Programs",
+      "href": "programs.html"
+    },
+    {
+      "label": "Gallery",
+      "href": "gallery.html"
+    },
+    {
+      "label": "Board",
+      "href": "board.html"
+    }
   ],
   "cta_label": "Partner With Us",
   "cta_href": "programs.html#inquiry"
