@@ -7,7 +7,7 @@
   "email": "safespacenottscic@gmail.com",
   "logo_image": "assets/img/logo.jpeg",
   "hero_image": "",
-  "about_image": "",
+  "about_image": "assets/img/board.png",
   "socials": [
     { "platform": "LinkedIn", "url": "https://linkedin.com/company/YOUR-HANDLE" },
     { "platform": "X", "url": "https://x.com/YOUR-HANDLE" },
