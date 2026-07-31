@@ -1,19 +1,17 @@
 # Decap CMS configuration for Safe Space - Notts CIC
 #
 # AUTH: This file intentionally contains no usernames or passwords.
-# Editor accounts and logins are managed entirely by the backend below
-# (Netlify Identity + Git Gateway, or a GitHub OAuth app — see README.md
-# in this folder for setup steps for either option). Each staff member
-# gets their own login; there is no shared site-wide password anywhere
-# in this repository.
+# Editors log in with their own GitHub account, via the OAuth gateway
+# at base_url below (see README.md in this folder for how that gateway
+# was set up). Access is granted by adding someone as a collaborator on
+# this GitHub repository — there is no shared site-wide password
+# anywhere in this repository.
 
 backend:
   name: github
   repo: Drew-Junior/safe-space
   branch: main
   base_url: https://decap-cms-oauth-wheat-two.vercel.app
-
-  #Point CMS at OAuth gateway
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
@@ -36,6 +34,8 @@ collections:
           - { label: "Facility Address", name: "address", widget: "string" }
           - { label: "Contact Email", name: "email", widget: "string" }
           - { label: "Logo Image", name: "logo_image", widget: "image", required: false, hint: "Square image works best (PNG or SVG with a transparent background). Leave empty to keep the default drawn mark." }
+          - { label: "Homepage Hero Background Image", name: "hero_image", widget: "image", required: false, hint: "Wide photo, works best around 1920x1080. Leave empty to keep the default brand gradient background." }
+          - { label: "Homepage About Section Image", name: "about_image", widget: "image", required: false, hint: "Roughly square or portrait photo. Leave empty to keep the default brand gradient panel." }
           - label: "Social Links"
             name: "socials"
             widget: "list"
@@ -68,7 +68,7 @@ collections:
               - label: "Category"
                 name: "category"
                 widget: "select"
-                options: ["Cook School", "Heritage Hub", "SOS Framework", "Early Years"]
+                options: ["Heritage Hub", "SOS Framework", "Early Years"]
               - { label: "Date", name: "date", widget: "date" }
               - { label: "Image (optional)", name: "image", widget: "image", required: false }
               - { label: "Summary", name: "summary", widget: "text" }
@@ -92,6 +92,13 @@ collections:
               - { label: "Role / Title", name: "role", widget: "string" }
               - { label: "Photo", name: "photo", widget: "image" }
               - { label: "Portfolio Page Link", name: "portfolio_href", widget: "string" }
+              - label: "Social Links (optional)"
+                name: "socials"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Platform", name: "platform", widget: "string" }
+                  - { label: "Profile URL", name: "url", widget: "string" }
 
   - name: "gallery"
     label: "Gallery"
@@ -109,5 +116,5 @@ collections:
               - label: "Category"
                 name: "category"
                 widget: "select"
-                options: ["The Cook School", "Heritage Hub", "Facility"]
+                options: ["Heritage Hub", "Facility"]
               - { label: "Image", name: "image", widget: "image" }
