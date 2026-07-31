@@ -77,7 +77,7 @@
   const endpoint = form.dataset.formspreeEndpoint;
   const data = new FormData(form);
 
-  if (endpoint && !endpoint.includes('YOUR_FORM_ID')) {
+  if (endpoint && !endpoint.includes('https://formspree.io/f/mqeroyjo')) {
     try {
       const res = await fetch(endpoint, {
         method: 'POST',
