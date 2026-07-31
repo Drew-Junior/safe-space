@@ -1,9 +1,9 @@
 {
   "items": [
-    { "title": "Painting & Colouring", "category": "Creative Arts", "icon": "🎨", "image": "" },
-    { "title": "Face Painting & Makeup", "category": "Creative Arts", "icon": "💄", "image": "" },
-    { "title": "Storytelling", "category": "Creative Arts", "icon": "📖", "image": "" },
-    { "title": "Hair Braiding", "category": "Heritage Hub", "icon": "💇🏾‍♀️", "image": "" },
+    { "title": "Painting & Colouring", "category": "Creative Arts", "icon": "", "image": "" },
+    { "title": "Face Painting & Makeup", "category": "Creative Arts", "icon": "", "image": "" },
+    { "title": "Storytelling", "category": "Creative Arts", "icon": "", "image": "" },
+    { "title": "Hair Braiding", "category": "Heritage Hub", "icon": "", "image": "" },
     { "title": "Word Searches", "category": "Cognitive Exercises", "icon": "🔤", "image": "" },
     { "title": "Dancing & Music", "category": "Expression & Movement", "icon": "🎶", "image": "" }
   ]
