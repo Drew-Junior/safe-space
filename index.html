@@ -6,6 +6,8 @@
 <title>Safe Space - Notts CIC | Psychological Safety. Vocational Excellence. Generational Development.</title>
 <meta name="description" content="Safe Space - Notts CIC is a structured transformation platform for Nottinghamshire's youth, bridging psychological safety, vocational training, and early years development.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -20,33 +22,23 @@
 
 <main id="main">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <p class="eyebrow">Nottinghamshire &middot; Community Interest Company</p>
-        <h1>Psychological Safety. Vocational Excellence. <span class="accent">Generational Development.</span></h1>
-        <p class="lede">Safe Space - Notts CIC is a structured, measurable transformation platform, a direct bridge between raw youth potential, psychological well-being, and real marketplace opportunity across Nottingham.</p>
+  <!-- HERO — full-bleed, photo-ready. Falls back to a brand gradient until
+       a real photo is set via Site Settings → Homepage Hero Background Image. -->
+  <section class="hero-visual" id="hero-visual">
+    <div class="hero-overlay">
+      <div class="container hero-overlay-inner">
+        <p class="eyebrow eyebrow-onimage">Nottinghamshire &middot; Community Interest Company</p>
+        <h1 class="onimage">Psychological Safety. Vocational Excellence.<br>Generational Development.</h1>
+        <p class="lede onimage">A structured, measurable transformation platform — a direct bridge between raw youth potential and real marketplace opportunity across Nottingham.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="programs.html#inquiry">Partner With Us</a>
-          <a class="btn btn-outline" href="services.html">Explore Our Services</a>
+          <a class="btn btn-outline btn-outline-onimage" href="services.html">Explore Our Services</a>
         </div>
-        <div class="stat-row">
+        <div class="stat-row stat-row-onimage">
           <div class="stat"><b>3</b><span>Core pillars of practice</span></div>
           <div class="stat"><b>2</b><span>Founding executive directors</span></div>
           <div class="stat"><b>1</b><span>Proprietary SOS framework</span></div>
         </div>
-      </div>
-      <div class="bridge-figure" aria-hidden="true">
-        <svg viewBox="0 0 420 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="80" cy="270" r="46" fill="#eef0fa"/>
-          <circle cx="340" cy="90" r="56" fill="#f8ecfc"/>
-          <path class="bridge-path" d="M80 270 C 150 210, 190 150, 340 90" stroke="#76CD26"/>
-          <circle cx="80" cy="270" r="10" fill="#000080"/>
-          <circle cx="340" cy="90" r="10" fill="#C000E0"/>
-          <text x="80" y="330" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="14" font-weight="700" fill="#000080">Potential</text>
-          <text x="340" y="60" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="14" font-weight="700" fill="#C000E0">Opportunity</text>
-        </svg>
       </div>
     </div>
   </section>
@@ -57,23 +49,23 @@
       <div class="section-head center">
         <p class="eyebrow">What we build</p>
         <h2>Three pillars, one pipeline</h2>
-        <p class="lede">Not a recreational youth facility, a structured pathway from psychological readiness to certified skill to sustained economic participation.</p>
+        <p class="lede">A structured pathway from psychological readiness to certified skill to sustained economic participation.</p>
       </div>
       <div class="pillar-grid">
         <div class="pillar-card reveal">
-          <span class="pillar-num">01</span>
-          <span class="tag">Economic Pipeline</span>
-          <h3>The Cook School &amp; Artisanal Enterprise</h3>
-          <p>Certified culinary and hospitality training alongside a self-sustaining Heritage Hub in textiles, hair braiding, and performing arts, a pre-employment incubator in business management, logistics, and financial discipline.</p>
+          <span class="pillar-icon pillar-icon-royal"><i class="fa-solid fa-palette"></i></span>
+          <span class="tag">Cultural &amp; Vocational Pipeline</span>
+          <h3>The Heritage Hub &amp; Cultural Enterprise</h3>
+          <p>A self-sustaining enterprise training youth in textiles, hair braiding, and performing arts — a pre-employment incubator in business management, logistics, and financial discipline.</p>
         </div>
         <div class="pillar-card reveal">
-          <span class="pillar-num">02</span>
+          <span class="pillar-icon pillar-icon-purple"><i class="fa-solid fa-shield-heart"></i></span>
           <span class="tag">Retention &amp; Readiness</span>
           <h3>The SOS Mental Fortitude Framework</h3>
-          <p>A proprietary Support, Observe, Succeed framework delivering clinical counselling and peer-led workshops that dismantle anxiety, trauma, and isolation, driving workforce and education retention.</p>
+          <p>A proprietary Support, Observe, Succeed framework delivering clinical counselling and peer-led workshops that dismantle anxiety, trauma, and isolation.</p>
         </div>
         <div class="pillar-card reveal">
-          <span class="pillar-num">03</span>
+          <span class="pillar-icon pillar-icon-lime"><i class="fa-solid fa-seedling"></i></span>
           <span class="tag">Early Years</span>
           <h3>Early Years Governance &amp; Scalability</h3>
           <p>A dedicated childcare model built to scale into full-service nursery provision, securing foundational learning standards from the ground up.</p>
@@ -82,15 +74,18 @@
     </div>
   </section>
 
-  <!-- SPIRITUAL / BRAND COPY -->
+  <!-- ABOUT — split layout, photo-ready. Falls back to a brand gradient panel
+       until a real photo is set via Site Settings → Homepage About Section Image. -->
   <section>
-    <div class="container" style="max-width: 860px;">
-      <div class="section-head center">
+    <div class="container about-split">
+      <div class="about-visual" id="about-visual" aria-hidden="true"></div>
+      <div>
         <p class="eyebrow">Who we are</p>
         <h2>Where mentorship meets excellence</h2>
+        <p class="lede">Specialised mentorship meets top-tier child development. Our leadership bridges certified behavioural counselling, therapeutic support, and expert early years practice.</p>
+        <p>We build a secure, legally compliant, nurturing ecosystem where the next generation thrives — emotionally, behaviourally, and spiritually.</p>
+        <a class="btn btn-outline" href="board.html">Meet the Board</a>
       </div>
-      <p class="lede" style="text-align:center;">Co-founded by a strategic team combining pastoral care and professional early years excellence, Safe Space is where specialised mentorship meets top-tier child development. 
-           Our leadership bridges certified behavioural counselling, therapeutic support, and expert early years practice to build a secure, legally compliant, nurturing ecosystem where the next generation thrives, emotionally, behaviourally, and spiritually.</p>
     </div>
   </section>
 
@@ -113,6 +108,7 @@
 
 <script src="js/social-icons.js"></script>
 <script src="js/partials.js"></script>
+<script src="js/home.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
