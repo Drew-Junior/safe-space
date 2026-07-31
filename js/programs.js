@@ -71,20 +71,35 @@
       form.dataset.email = e.detail.email;
     });
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const success = document.getElementById('inquiry-success');
-      const email = form.dataset.email || 'safespacenottscic@gmail.com';
-      const data = new FormData(form);
-      const subject = encodeURIComponent(`Programs Inquiry: ${data.get('inquiry_type') || 'General'}`);
-      const body = encodeURIComponent(
-        `Name: ${data.get('name')}\nOrganisation: ${data.get('organisation') || 'N/A'}\nEmail: ${data.get('email')}\nInquiry type: ${data.get('inquiry_type')}\n\nMessage:\n${data.get('message')}`
-      );
-      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-      if (success) success.classList.add('is-visible');
-    });
+    form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const success = document.getElementById('inquiry-success');
+  const endpoint = form.dataset.formspreeEndpoint;
+  const data = new FormData(form);
+
+  if (endpoint && !endpoint.includes('YOUR_FORM_ID')) {
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        form.reset();
+        if (success) success.classList.add('is-visible');
+        return;
+      }
+      throw new Error(`Formspree responded with ${res.status}`);
+    } catch (err) {
+      console.warn('Formspree submission failed, falling back to an email draft:', err);
+    }
   }
 
-  loadEvents();
-  wireForm();
-})();
+  const email = form.dataset.email || 'safespacenottscic@gmail.com';
+  const subject = encodeURIComponent(`Programs Inquiry: ${data.get('inquiry_type') || 'General'}`);
+  const body = encodeURIComponent(
+    `Name: ${data.get('name')}\nOrganisation: ${data.get('organisation') || 'N/A'}\nEmail: ${data.get('email')}\nInquiry type: ${data.get('inquiry_type')}\n\nMessage:\n${data.get('message')}`
+  );
+  window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  if (success) success.classList.add('is-visible');
+});
