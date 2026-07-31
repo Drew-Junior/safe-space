@@ -74,6 +74,23 @@ collections:
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Location", name: "location", widget: "string" }
 
+  - name: "activities"
+    label: "Featured Activities"
+    files:
+      - file: "content/activities.json"
+        label: "Activities List"
+        name: "activities"
+        fields:
+          - label: "Activities"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Emoji Icon (used if no photo is set)", name: "icon", widget: "string", required: false }
+              - { label: "Photo (optional — replaces the icon if set)", name: "image", widget: "image", required: false }
+
   - name: "board"
     label: "Board of Directors"
     files:
