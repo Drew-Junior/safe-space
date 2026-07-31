@@ -1,7 +1,5 @@
 {
   "items": [
-    { "title": "Culinary training session", "category": "The Cook School", "image": "assets/img/cook.jpg" },
-    { "title": "Plating practice", "category": "The Cook School", "image": "assets/img/plate.jpg" },
     { "title": "Hair braiding workshop", "category": "Heritage Hub", "image": "assets/img/braid.jpg" },
     { "title": "Textiles & design bench", "category": "Heritage Hub", "image": "assets/img/design.jpg" },
     { "title": "Facility reception", "category": "Facility", "image": "assets/img/reception.jpg" },
