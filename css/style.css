@@ -685,7 +685,19 @@ textarea { resize: vertical; min-height: 120px; }
   color: rgba(255,255,255,0.75);
   padding-block: var(--space-xl) var(--space-md);
   margin-top: var(--space-2xl);
+  position: relative;
+  overflow: hidden;
 }
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-lime-green), var(--color-purple));
+  transition: width 1.2s var(--ease);
+}
+.site-footer.is-visible::before { width: 100%; }
 .footer-grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr;
@@ -722,6 +734,8 @@ textarea { resize: vertical; min-height: 120px; }
   font-size: 1rem;
 }
 .social-row a:hover { border-color: var(--color-lime-green); color: var(--color-lime-green); }
+.social-row a { transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), color 0.25s var(--ease); }
+.social-row a:hover { transform: translateY(-3px); }
 
 /* Light-background variant, for use on white page sections (board/portfolio) */
 .social-row-light { display: flex; gap: 0.65rem; }
