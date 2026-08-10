@@ -1,9 +1,34 @@
 {
   "items": [
-    { "title": "Hair braiding workshop", "category": "Heritage Hub", "image": "assets/img/braid.jpg" },
-    { "title": "Textiles & design bench", "category": "Heritage Hub", "image": "assets/img/design.jpg" },
-    { "title": "Facility reception", "category": "Facility", "image": "assets/img/reception.jpg" },
-    { "title": "Group workshop room", "category": "Facility", "image": "assets/img/group.jpg" },
-    { "title": "Plating practice", "category": "Heritage Hub", "image": "assets/img/braid.jpg" }
+    {
+      "title": "Hair braiding workshop",
+      "category": "Heritage Hub",
+      "image": "assets/img/braid.jpg"
+    },
+    {
+      "title": "Textiles & design bench",
+      "category": "Heritage Hub",
+      "image": "assets/img/design.jpg"
+    },
+    {
+      "title": "Facility reception",
+      "category": "Facility",
+      "image": "assets/img/reception.jpg"
+    },
+    {
+      "title": "Group workshop room",
+      "category": "Facility",
+      "image": "assets/img/group.jpg"
+    },
+    {
+      "title": "Plating practice",
+      "category": "Heritage Hub",
+      "image": "assets/img/braid.jpg"
+    },
+    {
+      "title": "Social",
+      "category": "Facility",
+      "image": "/assets/img/art.jpg"
+    }
   ]
 }
