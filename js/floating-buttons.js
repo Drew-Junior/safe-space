@@ -13,7 +13,7 @@ document.addEventListener('settings:ready', (e) => {
   }
 
   const cta = document.createElement('a');
-  cta.href = settings.cta_href || 'programs.html#inquiry';
+  cta.href = settings.register_href || settings.cta_href || 'programs.html#inquiry';
   cta.className = 'floating-btn floating-cta';
   cta.setAttribute('aria-label', 'Fill the inquiry form');
   cta.innerHTML = '<i class="fa-solid fa-pen-to-square" aria-hidden="true"></i><span>Register</span>';
