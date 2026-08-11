@@ -569,11 +569,64 @@ section { padding-block: clamp(3.5rem, 7vw, var(--space-xl)); }
 }
 .lightbox.is-open { display: flex; }
 .lightbox img { max-width: min(90vw, 1000px); max-height: 85vh; border-radius: var(--radius-sm); }
+.lightbox-video {
+  display: none;
+  width: min(90vw, 960px);
+  aspect-ratio: 16/9;
+}
+.lightbox-video.is-active { display: block; }
+.lightbox-video iframe {
+  width: 100%; height: 100%;
+  border: 0;
+  border-radius: var(--radius-sm);
+}
 .lightbox-close {
   position: absolute; top: var(--space-sm); right: var(--space-sm);
   width: 44px; height: 44px; border-radius: 50%;
   background: #fff; border: none; cursor: pointer;
   font-size: 1.3rem; color: var(--color-royal-blue);
+  z-index: 1;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+.video-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: var(--color-royal-blue-soft);
+}
+.video-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s var(--ease); }
+.video-card:hover img { transform: scale(1.06); }
+.video-play-btn {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.video-play-btn i {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(0,0,45,0.55);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  transition: transform 0.25s var(--ease), background 0.25s var(--ease);
+}
+.video-card:hover .video-play-btn i { transform: scale(1.1); background: var(--color-purple); }
+.video-caption {
+  position: absolute; inset-inline: 0; bottom: 0;
+  padding: 0.6rem 0.8rem;
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0,0,45,0.85), transparent);
+  text-align: left;
 }
 
 /* Board / directors */
