@@ -91,7 +91,23 @@ collections:
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Emoji Icon (used if no photo is set)", name: "icon", widget: "string", required: false }
               - { label: "Photo (optional — replaces the icon if set)", name: "image", widget: "image", required: false }
-
+              
+- name: "videos"
+    label: "Gallery Videos"
+    files:
+      - file: "content/videos.json"
+        label: "Videos"
+        name: "videos"
+        fields:
+          - label: "Videos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "YouTube Video ID", name: "youtube_id", widget: "string", required: false, hint: "The part after v= in a YouTube URL — e.g. for youtube.com/watch?v=dQw4w9WgXcQ, use dQw4w9WgXcQ. Leave blank to keep this entry hidden." }
+              - { label: "Custom Thumbnail (optional)", name: "thumbnail", widget: "image", required: false, hint: "Leave empty to use YouTube's own thumbnail automatically." }
+              
   - name: "board"
     label: "Board of Directors"
     files:
