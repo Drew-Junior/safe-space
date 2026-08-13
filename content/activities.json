@@ -1,10 +1,40 @@
 {
   "items": [
-    { "title": "Painting & Colouring", "category": "Creative Arts", "icon": "", "image": "assets/img/art.jpg" },
-    { "title": "Face Painting & Makeup", "category": "Creative Arts", "icon": "", "image": "assets/img/face.png" },
-    { "title": "Storytelling", "category": "Creative Arts", "icon": "", "image": "assets/img/story.jpg" },
-    { "title": "Hair Braiding", "category": "Heritage Hub", "icon": "", "image": "assets/img/braid.jpg" },
-    { "title": "Word Searches", "category": "Cognitive Exercises", "icon": "🔤", "image": "assets/img/word.png" },
-    { "title": "Dancing & Music", "category": "Expression & Movement", "icon": "🎶", "image": "assets/img/dance.jpg" }
+    {
+      "title": "Painting & Colouring",
+      "category": "Creative Arts",
+      "icon": "",
+      "image": "assets/img/art.jpg"
+    },
+    {
+      "title": "Face Painting & Makeup",
+      "category": "Creative Arts",
+      "icon": "",
+      "image": "/assets/img/paint.jpg"
+    },
+    {
+      "title": "Storytelling",
+      "category": "Creative Arts",
+      "icon": "",
+      "image": "assets/img/story.jpg"
+    },
+    {
+      "title": "Hair Braiding",
+      "category": "Heritage Hub",
+      "icon": "",
+      "image": "/assets/img/braid.jpg"
+    },
+    {
+      "title": "Word Searches",
+      "category": "Cognitive Exercises",
+      "icon": "🔤",
+      "image": "assets/img/word.png"
+    },
+    {
+      "title": "Dancing & Music",
+      "category": "Expression & Movement",
+      "icon": "🎶",
+      "image": "assets/img/dance.jpg"
+    }
   ]
 }
