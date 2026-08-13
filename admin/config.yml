@@ -35,8 +35,15 @@ collections:
           - { label: "Contact Email", name: "email", widget: "string" }
           - { label: "WhatsApp Number (for the floating chat button)", name: "whatsapp_number", widget: "string", required: false, hint: "Digits only, with country code, no plus sign or spaces — e.g. 233201234567. Leave empty to hide the floating WhatsApp button." }
           - { label: "Logo Image", name: "logo_image", widget: "image", required: false, hint: "Square image works best (PNG or SVG with a transparent background). Leave empty to keep the default drawn mark." }
-          - { label: "Homepage Hero Background Image", name: "hero_image", widget: "image", required: false, hint: "Wide photo, works best around 1920x1080. Leave empty to keep the default brand gradient background." }
+          - { label: "Homepage Hero Background Image", name: "hero_image", widget: "image", required: false, hint: "Used if the slideshow list below is empty. Wide photo, works best around 1920x1080." }
+          - label: "Homepage Hero Slideshow (optional — overrides the single image above)"
+            name: "hero_images"
+            widget: "list"
+            required: false
+            hint: "Add two or more images for an automatic crossfade slideshow. Leave empty to use the single Hero Background Image above, or leave both empty for the default brand gradient."
+            field: { label: "Image", name: "image", widget: "image" }
           - { label: "Homepage About Section Image", name: "about_image", widget: "image", required: false, hint: "Roughly square or portrait photo. Leave empty to keep the default brand gradient panel." }
+          - { label: "Homepage CTA Band Background Image (the 'Bring your organisation into the pipeline' box)", name: "cta_band_image", widget: "image", required: false, hint: "Wide photo works best. Leave empty to keep the default brand gradient." }
           - label: "Social Links"
             name: "socials"
             widget: "list"
@@ -91,23 +98,7 @@ collections:
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Emoji Icon (used if no photo is set)", name: "icon", widget: "string", required: false }
               - { label: "Photo (optional — replaces the icon if set)", name: "image", widget: "image", required: false }
-              
-- name: "videos"
-    label: "Gallery Videos"
-    files:
-      - file: "content/videos.json"
-        label: "Videos"
-        name: "videos"
-        fields:
-          - label: "Videos"
-            name: "items"
-            widget: "list"
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string", required: false }
-              - { label: "YouTube Video ID", name: "youtube_id", widget: "string", required: false, hint: "The part after v= in a YouTube URL — e.g. for youtube.com/watch?v=dQw4w9WgXcQ, use dQw4w9WgXcQ. Leave blank to keep this entry hidden." }
-              - { label: "Custom Thumbnail (optional)", name: "thumbnail", widget: "image", required: false, hint: "Leave empty to use YouTube's own thumbnail automatically." }
-              
+
   - name: "board"
     label: "Board of Directors"
     files:
@@ -152,3 +143,19 @@ collections:
                 widget: "select"
                 options: ["Heritage Hub", "Facility"]
               - { label: "Image", name: "image", widget: "image" }
+
+  - name: "videos"
+    label: "Gallery Videos"
+    files:
+      - file: "content/videos.json"
+        label: "Videos"
+        name: "videos"
+        fields:
+          - label: "Videos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "YouTube Video ID", name: "youtube_id", widget: "string", required: false, hint: "The part after v= in a YouTube URL — e.g. for youtube.com/watch?v=dQw4w9WgXcQ, use dQw4w9WgXcQ. Leave blank to keep this entry hidden." }
+              - { label: "Custom Thumbnail (optional)", name: "thumbnail", widget: "image", required: false, hint: "Leave empty to use YouTube's own thumbnail automatically." }
