@@ -6,9 +6,9 @@
       "image": "assets/img/braid.jpg"
     },
     {
-      "title": "Textiles & design bench",
+      "title": "The launch ",
       "category": "Heritage Hub",
-      "image": "assets/img/design.jpg"
+      "image": "/assets/img/the-board.jpg"
     },
     {
       "title": "Facility reception",
@@ -24,6 +24,11 @@
       "title": "Plating practice",
       "category": "Heritage Hub",
       "image": "assets/img/braid.jpg"
+    },
+    {
+      "category": "Heritage Hub",
+      "title": "The team",
+      "image": "/assets/img/the-team.jpg"
     }
   ]
 }
