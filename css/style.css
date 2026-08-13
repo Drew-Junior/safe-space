@@ -863,31 +863,45 @@ textarea { resize: vertical; min-height: 120px; }
   position: relative;
   overflow: hidden;
 }
-.page-header::before {
-  content: "";
-  position: absolute;
-  inset: -50%;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(0,0,128,0.09) 0px, rgba(0,0,128,0.09) 36px,
-    rgba(192,0,224,0.09) 36px, rgba(192,0,224,0.09) 72px,
-    rgba(118,205,38,0.09) 72px, rgba(118,205,38,0.09) 108px,
-    rgba(255,255,255,0) 108px, rgba(255,255,255,0) 144px
-  );
-  animation: stripeSlide 14s linear infinite;
-  z-index: 0;
-}
-@keyframes stripeSlide {
-  from { transform: translate(0, 0); }
-  to   { transform: translate(144px, 144px); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .page-header::before { animation: none; }
-}
 .page-header .container { position: relative; z-index: 1; }
 .page-header h1 { font-size: var(--step-3); }
 .page-header p { max-width: 60ch; }
 
+/* Floating decorative shapes — soft colourful circles and curved lines,
+   each drifting independently and slowly. Purely decorative (aria-hidden),
+   sits behind page content (.page-header .container is z-index: 1 above it). */
+.floating-shapes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.shape { position: absolute; opacity: 0.5; }
+.shape-circle { border-radius: 50%; filter: blur(1px); }
+.c1 { width: 90px;  height: 90px;  background: var(--color-lime-green);  top: 10%; left: 6%;   animation: floatA 9s  ease-in-out infinite; }
+.c2 { width: 56px;  height: 56px;  background: var(--color-purple);      top: 62%; left: 16%;  animation: floatB 12s ease-in-out infinite; }
+.c3 { width: 130px; height: 130px; background: var(--color-royal-blue); opacity: 0.22; top: 14%; right: 8%; animation: floatC 14s ease-in-out infinite; }
+.c4 { width: 48px;  height: 48px;  background: var(--color-lime-green);  top: 68%; right: 18%; animation: floatA 10s ease-in-out infinite reverse; }
+.shape-curve { width: 160px; height: 160px; }
+.curve1 { top: 6%;  right: 20%; animation: floatB 16s ease-in-out infinite; }
+.curve2 { bottom: 4%; left: 28%; animation: floatC 13s ease-in-out infinite reverse; }
+
+@keyframes floatA {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(18px, -22px) scale(1.08); }
+}
+@keyframes floatB {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50%      { transform: translate(-24px, 16px) rotate(8deg); }
+}
+@keyframes floatC {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(14px, 20px) scale(0.94); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shape { animation: none !important; }
+}
 /* Skip link */
 .skip-link {
   position: absolute; left: -999px; top: auto;
