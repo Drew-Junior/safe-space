@@ -11,24 +11,29 @@
       "image": "/assets/img/the-board.jpg"
     },
     {
-      "title": "Facility reception",
+      "title": "Performers",
       "category": "Facility",
-      "image": "assets/img/reception.jpg"
+      "image": "/assets/img/whatsapp-image-2026-08-10-at-11.38.32-am.jpeg"
     },
     {
       "title": "Group workshop room",
       "category": "Facility",
-      "image": "assets/img/group.jpg"
+      "image": "/assets/img/whatsapp-image-2026-08-10-at-11.38.35-am.jpeg"
     },
     {
-      "title": "Plating practice",
+      "title": "At the launching",
       "category": "Heritage Hub",
-      "image": "assets/img/braid.jpg"
+      "image": "/assets/img/whatsapp-image-2026-08-11-at-5.45.07-am.jpeg"
     },
     {
       "category": "Heritage Hub",
       "title": "The team",
       "image": "/assets/img/the-team.jpg"
+    },
+    {
+      "title": "Group art work",
+      "category": "Heritage Hub",
+      "image": "/assets/img/art.jpeg"
     }
   ]
 }
