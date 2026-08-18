@@ -986,3 +986,64 @@ textarea { resize: vertical; min-height: 120px; }
   .floating-cta { left: 16px; padding: 0.75rem 1rem; }
   .floating-cta span { display: none; }
 }
+
+
+/* ==========================================================================
+   Homepage quote marquee — two rows of colourful, always-moving quotes.
+   ========================================================================== */
+.quote-marquee-section {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-lg);
+  background: linear-gradient(120deg, #000080, #4a0a6e, #C000E0, #1a0a5e, #000080);
+  background-size: 300% 300%;
+  animation: footerGradientFlow 16s ease infinite;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.marquee-row {
+  overflow: hidden;
+  transition: transform 0.25s ease-out;
+  will-change: transform;
+}
+.marquee-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marqueeLeft 42s linear infinite;
+}
+#marquee-row-2 .marquee-track {
+  animation: marqueeRight 36s linear infinite;
+}
+@keyframes marqueeLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes marqueeRight {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+.quote-pill {
+  flex: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: #fff;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+.quote-pill.c-royal { background: var(--color-royal-blue); }
+.quote-pill.c-purple { background: var(--color-purple); }
+.quote-pill.c-lime { background: var(--color-lime-green); color: var(--color-royal-blue-deep); }
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-marquee-section { animation: none; }
+  .marquee-track { animation: none; }
+  .marquee-row { transform: none !important; }
+}
+@media (max-width: 700px) {
+  .quote-pill { font-size: 0.9rem; padding: 0.75rem 1.2rem; }
+}
